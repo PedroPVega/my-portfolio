@@ -57,7 +57,7 @@ describe('InternshipSection', () => {
   it('renders the section heading', () => {
     render(<InternshipSection />)
 
-    expect(screen.getByRole('heading', { level: 2, name: 'My internships' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'Work Experiences' })).toBeInTheDocument()
   })
 
   it('renders one list item per internship', () => {
