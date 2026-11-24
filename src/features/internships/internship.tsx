@@ -1,18 +1,18 @@
+// src/features/internships/internship.tsx
 interface CardProps {
   title: string
   description: string
-  repoUrl: string
+  dates: string
 }
 
-function InternshipCard({ title, description, repoUrl }: CardProps) {
+function InternshipCard({ title, description, dates }: CardProps) {
   return (
     <div>
-      <h2 role="heading">Internship</h2>
-      <h3>{title}</h3>
-      <p>Description: {description}</p>
-      <a role="link" href={repoUrl}>
-        /repository/i
-      </a>
+      <section>
+        <h3>{'Company : ' + title}</h3>
+        <h4>{dates}</h4>
+      </section>
+      <p>{description}</p>
     </div>
   )
 }
