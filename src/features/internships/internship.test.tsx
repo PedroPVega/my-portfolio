@@ -1,3 +1,4 @@
+// src/features/internships/internship.test.tsx
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import InternshipCard from './internship'
@@ -7,7 +8,7 @@ type IntCardProps = React.ComponentProps<typeof InternshipCard>
 const createProps = (overrides: Partial<IntCardProps> = {}): IntCardProps => ({
   title: 'Portfolio',
   description: 'My personal website',
-  repoUrl: 'http://dummy-link',
+  dates: 'January 2000 - September 2078',
   ...overrides,
 })
 
@@ -17,10 +18,6 @@ describe('InternshipCard', () => {
 
     render(<InternshipCard {...props} />)
 
-    expect(screen.getByRole('heading', { name: 'Portfolio' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /repository/i })).toHaveAttribute(
-      'href',
-      'http://dummy-link',
-    )
+    expect(screen.getByRole('heading', { name: 'Company : Portfolio' })).toBeInTheDocument()
   })
 })
