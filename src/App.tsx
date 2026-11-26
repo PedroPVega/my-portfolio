@@ -1,3 +1,4 @@
+import Hero from './features/hero/hero'
 import InternshipSection from './features/internships/internship_section'
 
 function App() {
@@ -5,8 +6,7 @@ function App() {
     <>
       <section id="center">
         <div>
-          <h1>My personal portfolio</h1>
-          <p>Source code at https://github.com/PedroPVega/my-portfolio</p>
+          <Hero></Hero>
           <InternshipSection></InternshipSection>
         </div>
       </section>
